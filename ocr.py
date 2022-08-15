@@ -7,6 +7,7 @@ img_path = '/content/surf.jpeg'
 
 reader = easyocr.Reader(['en'], gpu = False)
 result = reader.readtext(img_path)
+print(result)
 
 top_left = tuple(result[0][0][0])
 bottom_right = tuple(result[0][0][2])
